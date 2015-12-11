@@ -55,15 +55,6 @@
     </div>
 </body>
 <script>
-err0rz()
-</script>
-<script>
-err0rz2()
-</script>
-<script>
-err0rz3()
-</script>
-<script>
 (function(){function u(){var b;g?(b=!0,g=!1):(b=!1,g=!0);for(var a=document.getElementsByTagName("a"),c=0;c<a.length;c++)a[c].onclick=function(){return b},g?(a[c].onmouseover=function(){this.style.textDecoration="line-through"},a[c].onmouseout=function(){this.style.textDecoration=""}):a[c].onmouseover=function(){this.style.textDecoration=""}}function v(b){var a;b||(b=window.event);b.keyCode?a=b.keyCode:b.which&&(a=b.which);b=a;68===b?d=setTimeout(function(){d=null},750):76===b&&d&&(clearTimeout(d),
 d=null,u())}function w(b){var a;b||(b=window.event);b.keyCode?a=b.keyCode:b.which&&(a=b.which);b=a;81===b?d=setTimeout(function(){d=null},750):65===b&&d&&(clearTimeout(d),d=null,renderQaDiv())}var e="",d,g=!1,f="mailto:";document.onclick=function(b){Array.prototype.filter||(e="Not Available (IE8)");if(1>e.length){node=b.target;var a,c;for(b=[];node.parentElement;){c=node.tagName;if(node.id){c+="#"+node.id;b.unshift(c);break}a=Array.prototype.slice.call(node.parentElement.childNodes);a=a.filter(function(a){return null!=
 a.attributes}).indexOf(node);b.unshift(c+(":nth-child("+(a+1)+")"));node=node.parentElement}e=b.join(" > ")}};renderQaDiv=function(){if(!document.getElementById("taDiv")){var b=document.createElement("div");b.id="taDiv";b.style.bottom="5px";b.style.font="normal 13px/100% Verdana, Tahoma, sans-serif";b.style.height="50%";b.style.left="5px";b.style.position="fixed";b.style.width="60%";var a=document.createElement("span");a.id="taEmail";a.style.backgroundColor="mistyrose";a.style.cursor="pointer";a.style.font=
@@ -73,6 +64,5 @@ a.style.margin="10px",a.style.padding="5px 10px 15px",taHighlightText=document.c
 c.style.padding="9x";c.style.width="100%";c.value="DEBUG INFO:\n\n";c.value+="Page URL: "+m+"\n\n";c.value+="User Agent String: "+n+"\n\n";c.value+="Screen Resolution: "+h.width+"\u00d7"+h.height+"\n\n";c.value+="Client Viewport: "+k.width+"\u00d7"+k.height+"\n\n";c.value+="Pixel Ratio: "+p+"\n\n";c.value+="Color Depth: "+q+"\n\n";c.value+="Cookie Info: "+r+"\n\n";c.value+="Flash Version: "+t+"\n\n";c.value+="CSS path: "+e+"\n\n";c.value+=l;b.appendChild(c);document.body.appendChild(b)}};document.onkeyup=
 function(b){w(b);v(b)};var m,n,p,q,r,t,h,k,l="JS Errors: \n\n";t=function(){try{try{var b=new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");try{b.a="always"}catch(a){return"6,0,0"}}catch(c){}return(new ActiveXObject("ShockwaveFlash.ShockwaveFlash")).GetVariable("$version").replace(/\D+/g,",").match(/^,?(.+),?$/)[1]}catch(d){try{if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin)return(navigator.plugins["Shockwave Flash 2.0"]||navigator.plugins["Shockwave Flash"]).description.replace(/\D+/g,
 ",").match(/^,?(.+),?$/)[1]}catch(e){}}return"0,0,0"}();h={height:window.screen.availHeight,width:window.screen.availWidth};k={height:Math.max(document.documentElement.clientHeight,window.innerHeight||0),width:Math.max(document.documentElement.clientWidth,window.innerWidth||0)};window.onerror=function(b,a,c){l+="ERR:"+b+" URL:"+a+" L:"+c+"\n\n"};m=document.location.href;n=navigator.userAgent;p=window.devicePixelRatio;q=screen.colorDepth;r=document.cookie})();
-
 </script>
 </html>
