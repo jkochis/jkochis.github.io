@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+template: inverse
+class: center, middle, inverse
+
+# why webpack?
+
+???
+
+---
+
+# why webpack?
+
+## Problem: regressions
+
+???
+
+---
+
+# why webpack?
+
+## Problem: regressions
+## Solution: automated tests
+
+???
+
+Every release we had some kind of regression or bug. They weren't always front end, but I wanted it to never be front end.
+
+---
+
+# why webpack?
+
+## ES6 is cool and has a lot of great new features, and we should be able to use it everyday without solving the riddle of the sphinx.
+
+---
+
+# why webpack?
+
+### Webpack makes it easy. Just use the babel loader and you&rsquo;re good to go.
+
+```javascript
+module: {
+  loaders: [
+    {
+      test: /\.jsx?$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'babel?presets[]=react,presets[]=es2015'
+    }
+  ]
+}
+```
+```javascript
+const isNegativeZero = (x) => Object.is(-0, x);
+```
+
+---
+
+# why webpack?
+
+### Webpack makes it easy. Just use the babel loader and you&rsquo;re good to go.
+
+```javascript
+module: {
+  loaders: [
+    {
+      test: /\.jsx?$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: 'babel?presets[]=react,presets[]=es2015'
+    }
+  ]
+}
+```
+```javascript
+const isNegativeZero = (x) => Object.is(-0, x);
+```
+```javascript
+"use strict";
+
+var isNegativeZero = function isNegativeZero(x) {
+  return Object.is(-0, x);
+};
+```
+
+---
+
+# why not grunt or gulp?
+
+???
+
+---
+
+# why not grunt or gulp?
+
+## Grunt: R.I.P.
+
+???
+
+---
+
+# why not grunt or gulp?
+
+## Grunt: R.I.P.
+## Gulp: we were already using gulp, but getting the type of testing we wanted was a better job for webpack.
+
+???
+
+---
+
+# why not grunt or gulp?
+
+## Grunt: R.I.P.
+## Gulp: we were already using gulp, but getting the type of testing we wanted was a better job for webpack.
+## We needed headless browser testing automation.
+
+???
+
+Grunt is on its way out, and no one likes using it. Gulp is okay, but I like the webpack's magic, and I could see that it was gaining a lot of fans in the community. More of the tools I was learning about came bundled with webpack instead of gulp. Angular, React, etc.
+
+We didn't need unit tests for our JS. Our JS was mostly not functional, so it couldn't be tested for return values, which is what you need to run unit tests. We wanted to be able to run our automated tests before sending anything to QA.
+
+---
+
+# why else?
+
+## HMR: Hot Module Replacement
+## Better coding habits. L33t even.
+## Move toward CommonJS
+
+???
+
+Hot module replacement is like the super saiyan form of BrowserSync. You can edit your js or css and webpack will only reload the part you changed and update the part of the page affected instead of compiling everything reloading the entire page.
+
+Moving to CommonJS gets us in the habit of coding for the browser the way we would on the server in NodeJS.
+
+---
+
+# FINITO
+
+---
+
+# FINITO
+
+#### (you can still use your other tools with webpack if you want tho)
+
+???
+
+Those are some of my main motivations that are also tangible to the GY team as whole. On a personal level I feel like it's part of my job to make sure we're using the best tools here. Now Leo can get in to the more technical details of webpack and tell you how he did it and what he learned.
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
