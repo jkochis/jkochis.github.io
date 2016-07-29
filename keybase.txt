@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jkochis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.jkochis.com
+  * I am jkochis (https://keybase.io/jkochis) on keybase.
+  * I have a public key ASCAiBqEbxR0bqmw5ApbtE4vCVzaFBRXPoBLfsPwhbYPhgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101a5b5413eaab0eab18d7b698e8c30bd94c5c78a31890baaf4ca32bc15087c886e0a",
+            "host": "keybase.io",
+            "kid": "012080881a846f14746ea9b0e40a5bb44e2f095cda1414573e804b7ec3f085b60f860a",
+            "uid": "266aa7363583eda3cb1fd7144a578119",
+            "username": "jkochis"
+        },
+        "service": {
+            "hostname": "www.jkochis.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1469809511,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1469809404,
+        "hash": "f3237c5c1ef19847171ce7a653c3b7299b26749a13212c3685508d31f2571b37cf72c5fb0cb871872598852c1f810ab07a401f2fa86f8f5dbe776f3b6c85b788",
+        "seqno": 548573
+    },
+    "prev": "eb0ac634188ce0d274c3444b5f9bb4ab14d7f838089b4ea8049d22b86df3644d",
+    "seqno": 22,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEggIgahG8UdG6psOQKW7ROLwlc2hQUVz6AS37D8IW2D4YKp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYTViNTQxM2VhYWIwZWFiMThkN2I2OThlOGMzMGJkOTRjNWM3OGEzMTg5MGJhYWY0Y2EzMmJjMTUwODdjODg2ZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwODA4ODFhODQ2ZjE0NzQ2ZWE5YjBlNDBhNWJiNDRlMmYwOTVjZGExNDE0NTczZTgwNGI3ZWMzZjA4NWI2MGY4NjBhIiwidWlkIjoiMjY2YWE3MzYzNTgzZWRhM2NiMWZkNzE0NGE1NzgxMTkiLCJ1c2VybmFtZSI6Imprb2NoaXMifSwic2VydmljZSI6eyJob3N0bmFtZSI6Ind3dy5qa29jaGlzLmNvbSIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTYifSwiY3RpbWUiOjE0Njk4MDk1MTEsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ2OTgwOTQwNCwiaGFzaCI6ImYzMjM3YzVjMWVmMTk4NDcxNzFjZTdhNjUzYzNiNzI5OWIyNjc0OWExMzIxMmMzNjg1NTA4ZDMxZjI1NzFiMzdjZjcyYzVmYjBjYjg3MTg3MjU5ODg1MmMxZjgxMGFiMDdhNDAxZjJmYTg2ZjhmNWRiZTc3NmYzYjZjODViNzg4Iiwic2Vxbm8iOjU0ODU3M30sInByZXYiOiJlYjBhYzYzNDE4OGNlMGQyNzRjMzQ0NGI1ZjliYjRhYjE0ZDdmODM4MDg5YjRlYTgwNDlkMjJiODZkZjM2NDRkIiwic2Vxbm8iOjIyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJjcov5xfn6shVsaKMSUbnaczjfaNaClS2lTV6GvL1emX5G6PdAQBB2U+/qZTiJLVXtKmOLlrC1/1CPBXj3/YQGoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCC9PNN3NRZZuD1sRvKTwnxE5pCcI+CHANSyuomXn/xfa6N0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jkochis
+
+==================================================================
