@@ -1,68 +1,197 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>QA Helper Test Page</title>
-    <style>body{font-family: arial; margin: 2vw;}</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Wedding</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* CSS HEX */
+            --greenish: #A69B03;
+            --sandy-brown: #F2A85Eff;
+            --butterscotch: #CC9649ff;
+            --butterscotch-2: #E39932ff;
+            --pumpkin: #F07924ff;
+            --chocolate: #803904ff;
+            /* CSS Gradient */
+            --gradient-top: linear-gradient(0deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-right: linear-gradient(90deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-bottom: linear-gradient(180deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-left: linear-gradient(270deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-top-right: linear-gradient(45deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-bottom-right: linear-gradient(135deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-top-left: linear-gradient(225deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-bottom-left: linear-gradient(315deg, #F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --gradient-radial: radial-gradient(#F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+            --page-gradient: radial-gradient(#F2A85Eff, #CC9649ff, #E39932ff, #F07924ff, #803904ff);
+        }
+
+        body {
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            /* Ensures the body covers the full viewport height */
+            background: var(--page-gradient);
+            background-size: 500% 500%;
+            /* Makes the gradient large enough to animate */
+            animation: spin-gradient 30s ease infinite;
+            /* Applies the spinning animation */
+            color: var(--chocolate);
+        }
+
+        @keyframes spin-gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: var(--page-gradient);
+                background-size: 500% 500%;
+                animation: spin-gradient 15s ease infinite;
+                color: var(--chocolate);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background: var(--page-gradient);
+                background-size: 500% 500%;
+                animation: spin-gradient 15s ease infinite;
+                color: var(--chocolate);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            /* Add a dramatic box shadow */
+            box-shadow: 10px 10px 30px 5px rgba(128, 57, 4, 0.6);
+            /* Using a darker, semi-transparent version of --chocolate */
+        }
+
+        /* --- Updated Rules --- */
+        h1,
+        h2 {
+            text-align: center;
+            color: var(--greenish);
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(128, 57, 4, 0.2);
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .detail-item {
+            display: flex; /* Use Flexbox for layout */
+            align-items: baseline; /* Align label and value text baselines */
+            margin-bottom: 10px; /* Keep existing margin */
+            flex-wrap: wrap; /* Allow wrapping onto new line if needed, but value stays aligned */
+        }
+
+        .detail-label {
+            font-weight: bold;
+            margin-right: 0.5em; /* Add space between label and value */
+            flex-shrink: 0; /* Prevent the label from shrinking */
+        }
+
+        /* No specific flex properties needed for detail-value by default */
+        .detail-value {
+            font-style: italic;
+            color: var(--butterscotch);
+            /* The value will naturally wrap within its own flex item space */
+        }
+
+        .detail-value a {
+            color: var(--butterscotch);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .detail-value a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: var(--butterscotch);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        /* Removed the RSVP button styles as they weren't in the final HTML */
+    </style>
 </head>
 
 <body>
-    <h1><a href="http://jkochis.com">jkochis.com</a> is currently the demo page for the simple QA tool I developed to help testers of varying skill levels give better feedback in bug reports.</h1>
-    <h2>Press q then a to capture helpful details about the bug to use in your bug report! Click on the bug first to display the highlight option for taking a screenshot. If the bug is in a link, press d then l to disable link navigation before clicking on it.</h2>
-    <h3>If you have an idea to bring up the QA report on mobile, I'd love to hear it.</h3>
-    <div class="header-container">
-        <header class="wrapper clearfix">
-            <h1 class="title">h1.title</h1>
-            <nav>
-                <ul>
-                    <li><a href="#test-one">nav ul li a</a></li>
-                    <li><a href="#test-two">nav ul li a</a></li>
-                    <li><a href="#test-three">nav ul li a</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-    <div class="main-container">
-        <div class="main wrapper clearfix">
-            <article>
-                <header>
-                    <h1>article header h1</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
-                </header>
-                <section>
-                    <h2>article section h2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                </section>
-                <section>
-                    <h2>article section h2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-                </section>
-                <footer>
-                    <h3>article footer h3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                </footer>
-            </article>
-            <aside>
-                <h3>aside</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
-            </aside>
+    <div class="container">
+        <h1>The Wedding</h1>
+        <div class="details">
+            <div class="detail-item">
+                <span class="detail-label">Date:</span> <span class="detail-value"><nobr>September 27<sup>th</sup>, 2025</nobr></span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Time:</span> <span class="detail-value">2:00 PM</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Location:</span> <span class="detail-value">All Souls by the Sea, <nobr>Steuben, Maine</nobr></span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Address:</span> <span class="detail-value">103 Over&rsquo;s Point Rd, <nobr>Steuben, ME 04680</nobr></span>
+            </div>
+        </div>
+        <h2>The Reception</h2>
+        <div class="details">
+            <div class="detail-item">
+                <span class="detail-label">Time:</span> <span class="detail-value">4:00 PM</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Location:</span> <span class="detail-value">Ironbound Restaurant and Inn, <nobr>Hancock, Maine</nobr></span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Address:</span> <span class="detail-value">1513 US Hwy 1, <nobr>Hancock, ME 04640-3831</nobr></span>
+            </div>
+        </div>
+        <h2>R.S.V.P.</h2>
+        <div class="detail-item">
+            <span class="detail-label">Call or Text:</span> <span class="detail-value"><a href="tel:+15083406155">+1 (508) 340-6155</a></span>
+        </div>
+        <div class="detail-item">
+            <span class="detail-label">Email:</span> <span class="detail-value"><a href="mailto:msmnfriend@gmail.com">msmnfriend@gmail.com</a></span>
         </div>
     </div>
-    <div class="footer-container">
-        <footer class="wrapper">
-            <h3>footer</h3>
-        </footer>
-    </div>
 </body>
-<script>
-(function(){function u(){var b;g?(b=!0,g=!1):(b=!1,g=!0);for(var a=document.getElementsByTagName("a"),c=0;c<a.length;c++)a[c].onclick=function(){return b},g?(a[c].onmouseover=function(){this.style.textDecoration="line-through"},a[c].onmouseout=function(){this.style.textDecoration=""}):a[c].onmouseover=function(){this.style.textDecoration=""}}function v(b){var a;b||(b=window.event);b.keyCode?a=b.keyCode:b.which&&(a=b.which);b=a;68===b?d=setTimeout(function(){d=null},750):76===b&&d&&(clearTimeout(d),
-d=null,u())}function w(b){var a;b||(b=window.event);b.keyCode?a=b.keyCode:b.which&&(a=b.which);b=a;81===b?d=setTimeout(function(){d=null},750):65===b&&d&&(clearTimeout(d),d=null,renderQaDiv())}var e="",d,g=!1,f="mailto:";document.onclick=function(b){Array.prototype.filter||(e="Not Available (IE8)");if(1>e.length){node=b.target;var a,c;for(b=[];node.parentElement;){c=node.tagName;if(node.id){c+="#"+node.id;b.unshift(c);break}a=Array.prototype.slice.call(node.parentElement.childNodes);a=a.filter(function(a){return null!=
-a.attributes}).indexOf(node);b.unshift(c+(":nth-child("+(a+1)+")"));node=node.parentElement}e=b.join(" > ")}};renderQaDiv=function(){if(!document.getElementById("taDiv")){var b=document.createElement("div");b.id="taDiv";b.style.bottom="5px";b.style.font="normal 13px/100% Verdana, Tahoma, sans-serif";b.style.height="50%";b.style.left="5px";b.style.position="fixed";b.style.width="60%";var a=document.createElement("span");a.id="taEmail";a.style.backgroundColor="mistyrose";a.style.cursor="pointer";a.style.font=
-"normal 13px/100% Verdana, Tahoma, sans-serif";a.style.margin="10px";a.style.padding="5px 10px 15px";taEmailText=document.createTextNode("EMAIL");a.appendChild(taEmailText);a.onclick=function(){var a=c.value.replace(/(\r\n|\n|\r)/gm,"%0D%0A");f+="";f+="?subject=Found a Bug!";f+="&body="+a;window.location.href=f};b.appendChild(a);0!==e.length&&"Not Available (IE8)"!==e&&(a=document.createElement("span"),a.id="taHighlight",a.style.backgroundColor="powderblue",a.style.cursor="pointer",a.style.font="normal 13px/100% Verdana, Tahoma, sans-serif",
-a.style.margin="10px",a.style.padding="5px 10px 15px",taHighlightText=document.createTextNode("HIGHLIGHT"),a.appendChild(taHighlightText),a.onclick=function(){var a=document.querySelector(e);a.className+=" debugitas-highlighted";a.style.outline="5px dotted lawngreen"},b.appendChild(a));a=document.createElement("span");a.id="taClose";a.style.backgroundColor="lemonchiffon";a.style.cursor="pointer";a.style.font="normal 13px/100% Verdana, Tahoma, sans-serif";a.style.padding="5px 10px 15px";a.style.margin=
-"10px";taCloseText=document.createTextNode("CLOSE");a.appendChild(taCloseText);a.onclick=function(){var a=document.querySelector(".debugitas-highlighted");null!==a&&(a.style.outline="",a.classList.remove("debugitas-highlighted"));setTimeout(function(){e=""},50);document.body.removeChild(b)};b.appendChild(a);var c=document.createElement("textarea");c.style.backgroundColor="aliceblue";c.style.border="solid 3px gainsboro";c.style.font="normal 13px/100% Verdana, Tahoma, sans-serif";c.style.height="100%";
-c.style.padding="9x";c.style.width="100%";c.value="DEBUG INFO:\n\n";c.value+="Page URL: "+m+"\n\n";c.value+="User Agent String: "+n+"\n\n";c.value+="Screen Resolution: "+h.width+"\u00d7"+h.height+"\n\n";c.value+="Client Viewport: "+k.width+"\u00d7"+k.height+"\n\n";c.value+="Pixel Ratio: "+p+"\n\n";c.value+="Color Depth: "+q+"\n\n";c.value+="Cookie Info: "+r+"\n\n";c.value+="Flash Version: "+t+"\n\n";c.value+="CSS path: "+e+"\n\n";c.value+=l;b.appendChild(c);document.body.appendChild(b)}};document.onkeyup=
-function(b){w(b);v(b)};var m,n,p,q,r,t,h,k,l="JS Errors: \n\n";t=function(){try{try{var b=new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");try{b.a="always"}catch(a){return"6,0,0"}}catch(c){}return(new ActiveXObject("ShockwaveFlash.ShockwaveFlash")).GetVariable("$version").replace(/\D+/g,",").match(/^,?(.+),?$/)[1]}catch(d){try{if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin)return(navigator.plugins["Shockwave Flash 2.0"]||navigator.plugins["Shockwave Flash"]).description.replace(/\D+/g,
-",").match(/^,?(.+),?$/)[1]}catch(e){}}return"0,0,0"}();h={height:window.screen.availHeight,width:window.screen.availWidth};k={height:Math.max(document.documentElement.clientHeight,window.innerHeight||0),width:Math.max(document.documentElement.clientWidth,window.innerWidth||0)};window.onerror=function(b,a,c){l+="ERR:"+b+" URL:"+a+" L:"+c+"\n\n"};m=document.location.href;n=navigator.userAgent;p=window.devicePixelRatio;q=screen.colorDepth;r=document.cookie})();
-</script>
+
 </html>
