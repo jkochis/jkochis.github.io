@@ -149,54 +149,52 @@
   </div>
 
   <script>
-    let keySequence = '';
-    const targetSequence = 'xyzzy';
-    let sequenceTimeout;
+    let _0x1a2b = '';
+    const _0x3c4d = String.fromCharCode(120,121,122,122,121);
+    let _0x5e6f;
+    const _0x7890 = 'keydown';
+    const _0x1234 = 'toLowerCase';
+    const _0x5678 = 'length';
+    const _0x9abc = 'slice';
+    const _0xdef0 = 'Escape';
+    const _0x1357 = 'welcomeModal';
+    const _0x2468 = 'display';
+    const _0x369c = 'flex';
+    const _0x147a = 'none';
 
-    document.addEventListener('keydown', function(event) {
-      // Clear the timeout if it exists
-      clearTimeout(sequenceTimeout);
-      
-      // Add the pressed key to the sequence
-      keySequence += event.key.toLowerCase();
-      
-      // Keep only the last 5 characters (length of 'xyzzy')
-      if (keySequence.length > targetSequence.length) {
-        keySequence = keySequence.slice(-targetSequence.length);
+    document['addEventListener'](_0x7890, function(_0x2580) {
+      clearTimeout(_0x5e6f);
+      _0x1a2b += _0x2580['key'][_0x1234]();
+      if (_0x1a2b[_0x5678] > _0x3c4d[_0x5678]) {
+        _0x1a2b = _0x1a2b[_0x9abc](-_0x3c4d[_0x5678]);
       }
-      
-      // Check if the sequence matches
-      if (keySequence === targetSequence) {
-        showWelcome();
-        keySequence = ''; // Reset the sequence
+      if (_0x1a2b === _0x3c4d) {
+        _0x159e();
+        _0x1a2b = '';
         return;
       }
-      
-      // Reset the sequence after 2 seconds of inactivity
-      sequenceTimeout = setTimeout(() => {
-        keySequence = '';
-      }, 2000);
+      _0x5e6f = setTimeout(() => {
+        _0x1a2b = '';
+      }, 0x7d0);
     });
 
-    // Also listen for ESC key to close modal
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeWelcome();
+    document['addEventListener'](_0x7890, function(_0x3691) {
+      if (_0x3691['key'] === _0xdef0) {
+        _0x258f();
       }
     });
 
-    function showWelcome() {
-      document.getElementById('welcomeModal').style.display = 'flex';
+    function _0x159e() {
+      document['getElementById'](_0x1357)['style'][_0x2468] = _0x369c;
     }
 
-    function closeWelcome() {
-      document.getElementById('welcomeModal').style.display = 'none';
+    function _0x258f() {
+      document['getElementById'](_0x1357)['style'][_0x2468] = _0x147a;
     }
 
-    // Close modal when clicking outside the content
-    document.getElementById('welcomeModal').addEventListener('click', function(event) {
-      if (event.target === this) {
-        closeWelcome();
+    document['getElementById'](_0x1357)['addEventListener']('click', function(_0x4ad2) {
+      if (_0x4ad2['target'] === this) {
+        _0x258f();
       }
     });
   </script>
