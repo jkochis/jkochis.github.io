@@ -1,301 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Wedding</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        /* CSS HEX */
-        --greenish: #a69b03;
-        --sandy-brown: #f2a85eff;
-        --butterscotch: #cc9649ff;
-        --butterscotch-2: #e39932ff;
-        --pumpkin: #f07924ff;
-        --chocolate: #803904ff;
-        /* CSS Gradient */
-        --gradient-top: linear-gradient(
-          0deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-right: linear-gradient(
-          90deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-bottom: linear-gradient(
-          180deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-left: linear-gradient(
-          270deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-top-right: linear-gradient(
-          45deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-bottom-right: linear-gradient(
-          135deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-top-left: linear-gradient(
-          225deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-bottom-left: linear-gradient(
-          315deg,
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --gradient-radial: radial-gradient(
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-        --page-gradient: radial-gradient(
-          #f2a85eff,
-          #cc9649ff,
-          #e39932ff,
-          #f07924ff,
-          #803904ff
-        );
-      }
-
-      body {
-        font-family: "Lora", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        /* Use Flexbox */
-        justify-content: center;
-        /* Center horizontally */
-        align-items: center;
-        /* Center vertically */
-        background: var(--page-gradient);
-        background-size: 500% 500%;
-        /* Makes the gradient large enough to animate */
-        animation: spin-gradient 30s ease infinite;
-        /* Applies the spinning animation */
-        color: var(--chocolate);
-      }
-
-      @keyframes spin-gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-
-        50% {
-          background-position: 100% 50%;
-        }
-
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          background: var(--page-gradient);
-          background-size: 500% 500%;
-          animation: spin-gradient 15s ease infinite;
-          color: var(--chocolate);
-        }
-      }
-
-      @media (prefers-color-scheme: light) {
-        body {
-          background: var(--page-gradient);
-          background-size: 500% 500%;
-          animation: spin-gradient 15s ease infinite;
-          color: var(--chocolate);
-        }
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 20px;
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>JEH</title>
+  <style>
+    .typewriter-container {
+        background-color: #1a1a1a; /* Almost black background */
+        color: #f8f8f8; /* Almost white text */
+        font-family: 'Courier New', monospace; /* Typewriter font */
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        /* Add a dramatic box shadow */
-        box-shadow: 10px 10px 30px 5px rgba(128, 57, 4, 0.6);
-        /* Using a darker, semi-transparent version of --chocolate */
-      }
-
-      /* --- Updated Rules --- */
-      h1,
-      h2 {
         text-align: center;
-        color: var(--greenish);
-        opacity: 0.9;
-        text-shadow: 1px 1px 2px rgba(128, 57, 4, 0.2);
-      }
+        border-radius: 5px;
+        margin: 20px 0;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
 
-      .details {
-        margin-top: 20px;
-      }
+    .typewriter-text {
+        font-size: 18px;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #f8f8f8;
+        animation: typewriter 3s steps(18, end) forwards, blink-caret 0.5s step-end infinite;
+    }
 
-      .detail-item {
-        display: flex;
-        /* Use Flexbox for layout */
-        align-items: baseline;
-        /* Align label and value text baselines */
-        margin-bottom: 10px;
-        /* Keep existing margin */
-        flex-wrap: wrap;
-        /* Allow wrapping onto new line if needed, but value stays aligned */
-      }
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
 
-      .detail-label {
-        font-weight: bold;
-        margin-right: 0.5em;
-        /* Add space between label and value */
-        flex-shrink: 0;
-        /* Prevent the label from shrinking */
-      }
-
-      /* No specific flex properties needed for detail-value by default */
-      .detail-value {
-        font-style: italic;
-        color: var(--butterscotch);
-        /* The value will naturally wrap within its own flex item space */
-      }
-
-      .detail-value a {
-        color: var(--butterscotch);
-        text-decoration: underline;
-      }
-
-      p {
-        text-align: left;
-      }
-
-      /* Removed the RSVP button styles as they weren't in the final HTML */
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <h1>The Wedding</h1>
-      <div class="details">
-        <div class="detail-item">
-          <span class="detail-label">Date:</span>
-          <span class="detail-value">
-            <nobr>September 27<sup>th</sup>, 2025</nobr>
-          </span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-label">Time:</span>
-          <span class="detail-value">2:00 PM</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-label">Location:</span>
-          <span class="detail-value"
-            >All Souls by the Sea, <nobr>Steuben, Maine</nobr></span
-          >
-        </div>
-        <div class="detail-item">
-          <span class="detail-label">Address:</span>
-          <span class="detail-value">
-            <a
-              href="https://www.google.com/maps?q=All+Souls+by+the+Sea+103+Over's+Point+Rd,+Steuben,+ME+04680"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              103 Over&rsquo;s Point Rd, <nobr>Steuben, ME 04680</nobr>
-            </a>
-          </span>
-        </div>
-      </div>
-      <h2>The Reception</h2>
-      <div class="details">
-        <div class="detail-item">
-          <span class="detail-label">Time:</span>
-          <span class="detail-value">4:00 PM</span>
-        </div>
-        <div class="detail-item">
-          <span class="detail-label">Location:</span>
-          <span class="detail-value"
-            >Ironbound Restaurant and Inn, <nobr>Hancock, Maine</nobr></span
-          >
-        </div>
-        <div class="detail-item">
-          <span class="detail-label">Address:</span>
-          <span class="detail-value">
-            <a
-              href="https://www.google.com/maps?q=Ironbound+Restaurant+and+Inn+1513+US+Hwy+1,+Hancock,+ME+04640-3831"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              1513 US Hwy 1, <nobr>Hancock, ME 04640-3831</nobr>
-            </a>
-          </span>
-        </div>
-      </div>
-      <h2>R.S.V.P.</h2>
-      <div class="detail-item">
-        <span class="detail-label">Call or Text:</span>
-        <span class="detail-value"
-          ><a href="tel:+15083406155">+1 (508) 340-6155</a></span
-        >
-      </div>
-      <div class="detail-item">
-        <span class="detail-label">Email:</span>
-        <span class="detail-value"
-          ><a href="mailto:msmnfriend@gmail.com">msmnfriend@gmail.com</a></span
-        >
-      </div>
-      <div class="detail-item">
-        <span class="detail-label">Note:</span>
-        <span class="detail-value">Adult humans only</span>
-      </div>
-    </div>
-  </body>
+    @keyframes blink-caret {
+        from, to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #f8f8f8;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="typewriter-container">
+    <div class="typewriter-text">if you know, you know</div>
+  </div>
+</body>
 </html>
