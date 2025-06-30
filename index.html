@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <title>JEH</title>
   <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        font-family: 'Courier New', monospace;
+    }
+
     .typewriter-container {
         background-color: #1a1a1a; /* Almost black background */
         color: #f8f8f8; /* Almost white text */
@@ -45,11 +52,153 @@
             border-color: #f8f8f8;
         }
     }
+
+    .welcome-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcome-content {
+        background-color: #1a1a1a;
+        color: #f8f8f8;
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 600px;
+        border: 2px solid #f8f8f8;
+    }
+
+    .welcome-content h1 {
+        color: #00ff00;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .welcome-content p {
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .projects-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .projects-list li {
+        margin: 15px 0;
+    }
+
+    .projects-list a {
+        color: #00ff00;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 15px;
+        border: 1px solid #00ff00;
+        border-radius: 5px;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .projects-list a:hover {
+        background-color: #00ff00;
+        color: #000;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        color: #f8f8f8;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .close-btn:hover {
+        color: #00ff00;
+    }
   </style>
 </head>
 <body>
   <div class="typewriter-container">
     <div class="typewriter-text">if you know, you know</div>
   </div>
+
+  <div id="welcomeModal" class="welcome-modal">
+    <div class="welcome-content">
+      <span class="close-btn" onclick="closeWelcome()">&times;</span>
+      <h1>Welcome, Fellow Adventurer!</h1>
+      <p>You've discovered the magic word! Here are some of my projects:</p>
+      <ul class="projects-list">
+        <li><a href="index.qa-tool.html" target="_blank">QA Helper Tool</a></li>
+        <li><a href="https://github.com/jkochis" target="_blank">GitHub Profile</a></li>
+        <li><a href="https://keybase.io/jkochis" target="_blank">Keybase Profile</a></li>
+        <li><a href="#" target="_blank">Portfolio Site</a></li>
+        <li><a href="#" target="_blank">Another Project</a></li>
+      </ul>
+      <p style="margin-top: 30px; font-size: 14px; color: #888;">Press ESC or click the X to close</p>
+    </div>
+  </div>
+
+  <script>
+    let keySequence = '';
+    const targetSequence = 'xyzzy';
+    let sequenceTimeout;
+
+    document.addEventListener('keydown', function(event) {
+      // Clear the timeout if it exists
+      clearTimeout(sequenceTimeout);
+      
+      // Add the pressed key to the sequence
+      keySequence += event.key.toLowerCase();
+      
+      // Keep only the last 5 characters (length of 'xyzzy')
+      if (keySequence.length > targetSequence.length) {
+        keySequence = keySequence.slice(-targetSequence.length);
+      }
+      
+      // Check if the sequence matches
+      if (keySequence === targetSequence) {
+        showWelcome();
+        keySequence = ''; // Reset the sequence
+        return;
+      }
+      
+      // Reset the sequence after 2 seconds of inactivity
+      sequenceTimeout = setTimeout(() => {
+        keySequence = '';
+      }, 2000);
+    });
+
+    // Also listen for ESC key to close modal
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeWelcome();
+      }
+    });
+
+    function showWelcome() {
+      document.getElementById('welcomeModal').style.display = 'flex';
+    }
+
+    function closeWelcome() {
+      document.getElementById('welcomeModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside the content
+    document.getElementById('welcomeModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closeWelcome();
+      }
+    });
+  </script>
 </body>
 </html>
